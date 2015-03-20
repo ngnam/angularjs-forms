@@ -1,1 +1,47 @@
-IT worked!
+<!doctype html>
+<html ng-app="angularFormsApp">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Angular Forms</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="bower/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="app/styles/angular.css" media="all">
+
+  </head>
+  <body>
+<div id="main_content">
+  <!-- Header 
+  =================================== -->
+  <header-directive></header-directive>
+
+  <!-- Main 
+  =================================== -->
+  <section>
+    <div class="container"> 
+      <div class="row">        
+        <div class="col-md-12 col-xs-12">
+          test
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer 
+  =================================== -->
+  <footer-directive></footer-directive>
+
+</div>
+    <!-- js core -->
+    <script src="bower/jquery.min.js"></script>
+    <script src="bower/bootstrap/js/bootstrap.js"></script>
+    <script src="bower/angular/angular.js"></script>
+
+        <!-- js app -->
+        <script src="app/scripts/app.js"></script>
+        <script src="app/scripts/directives/headerdirective.js"></script>
+        <script src="app/scripts/directives/footerdirective.js"></script>
+
+</body>
+</html>

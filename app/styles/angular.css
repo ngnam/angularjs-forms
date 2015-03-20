@@ -1,0 +1,202 @@
+@charset "UTF-8";
+/*!
+	angular.css - http://ngnam.github.io/angularjs-forms
+	Licensed under the MIT license - http://opensource.org/licenses/MIT
+
+	Copyright (c) 2015 ngnam
+*/
+
+/*Main Style
+-------------------------------------------------- */
+
+
+/* --------------------------------------------------
+Main Style */
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 200px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 200px;
+}
+/*.footer {
+	color: #efefef;
+	background-color: #333;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-align: center;
+	margin-top: 50px;
+	border-top: 1px solid rgb(51, 51, 51);
+}*/
+.footer {
+	color: #fff;
+}
+.footer a:hover, .footer a:focus {
+	text-decoration: none;
+}
+/*reponsive*/
+@media only screen and (max-width: 768px) {
+  body { margin-bottom: 200px; }
+  .footer { height: 200px; }
+}
+.footer .footer_red {
+	background-color: rgba(172, 44, 22, 0.7); /*red*/
+	padding-top: 4px;
+	padding-bottom: 5px;
+	margin-top: 50px;	
+	border-top: 1px solid rgb(172, 44, 22);
+}
+.footer_red a {
+	color: rgb(178, 206, 36);
+} 
+.footer .footer_green {
+	background-color: rgba(178, 206, 36, 0.7); /*green*/
+	padding-top: 4px; 
+	padding-bottom: 5px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border: 1px solid  rgb(178, 206, 36 );
+}
+.footer_green a {
+	color: rgb(172, 44, 22);
+}
+.footer .footer_black {
+	background-color: #333; 
+	padding-top: 4px;
+	padding-bottom: 5px;
+	border-top: 1px solid black;
+}
+.footer_black a {
+	color: #fff;
+}
+
+
+/* End footer style
+-------------------------------------------------- */
+
+
+/* Main style 1
+-------------------------------------------------- */
+/*@media (min-width: 768px) {
+	.menu-collapse {
+    	border-top: 0;
+    	-webkit-box-shadow: none;      
+    	box-shadow: none;
+	}
+	.menu-collapse {
+		padding-right: 15px;
+		padding-left: 15px;
+		overflow-x: visible;
+		-webkit-overflow-scrolling: touch;
+		border-top: 1px solid rgba(0, 0, 0, 0);
+		-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	}
+	.menu-collapse.collapse {
+		display: block !important;
+		height: auto !important;
+		padding-bottom: 0;
+		overflow: visible !important;
+		visibility: visible !important;
+	}	
+}
+*/
+
+/*.menu_main {
+	background: rgb(240, 238, 238);	
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding: 5px 5px 5px 5px;	
+}
+.menu_main ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	width: 100%;
+}
+.menu_main ul li:hover {
+	position: relative;
+	z-index: 599;
+}
+.menu_main ul ul{
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 598;
+}
+.menu_main ul li:hover > ul { visibility: visible; }
+
+.menu_main ul ul { top: 0; left: 100%; }
+
+.menu_main a {
+	display: inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none; }
+
+.menu_main li { background: #005555; }
+.menu_main li:hover, .menu_main li.active { background: #5FD367; }
+
+.menu_main a {
+    color: #FFF;
+    line-height: 160%;
+    padding: 16px 8px 16px 28px;
+    width: 200px; }
+
+.menu_main ul ul li {
+	background: #006C6C;
+	border-bottom: 1px solid #007171; }
+
+.menu_main ul ul li:hover { background: #5FD367; }*/
+
+
+/*Vertical menu with hightlight boostrap */
+
+/*.menu_vertical .nav-pills>li.active>a, 
+.menu_vertical .nav-pills>li.active>a:hover, 
+.menu_vertical .nav-pills>li.active>a:focus {
+	color: #fff;
+	background-color: #428bca;
+}
+.menu_vertical .nav-pills>li>a {
+	border-radius: 0px;
+	color: #000;
+	text-decoration: none;
+}
+.menu_vertical .nav-pills>li>a:hover {
+	color: #000;
+	text-decoration: none;
+	border-right:4px solid #428bca;
+}
+.menu_vertical .nav-stacked>li {
+	margin-top: 0px;
+	margin-left: 0;
+	border-bottom:1px solid #dadada;
+	border-left:1px solid #dadada;
+	border-right:1px solid #dadada;
+}
+.add_border_top {
+	border-top: 1px solid #dadada;
+}
+.active2 {
+    border-right:4px solid #428bca;
+}*/
+
+/* End Main style
+-------------------------------------------------- */
