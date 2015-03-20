@@ -10,6 +10,6 @@ var app = angular.module('angularFormsApp');
 app.directive('footerDirective', function () {
     return {
     	restrict: 'E',
-      	templateUrl: 'app/views/templates/header.html'
+      	templateUrl: 'app/views/templates/footer.html'
     };
 });
