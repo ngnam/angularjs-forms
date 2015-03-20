@@ -1,33 +1,12 @@
-``/* Sticky footer styles``
-``-------------------------------------------------- */``
-``html {``
-  ``position: relative;``
-  ``min-height: 100%;``
-``}``
-``body {``
-  ``/* Margin bottom by footer height */``
-  ``margin-bottom: 60px;``
-``}``
-``.footer {``
-  ``position: absolute;``
-  ``bottom: 0;``
-  ``width: 100%;``
-  ``/* Set the fixed height of the footer here */``
-  ``height: 60px;``
-  ``background-color: #f5f5f5;``
-``}``
+## http-server
 
-### for this HTML
+'npm install http-server -g'
 
-`<html>`
-    `...`
-    `<body>`
-        `<!-- Begin page content -->`
-        `<div class="container">`
-        `</div>`
-        `...`
+## To use it:
 
-        `<footer class="footer">`
-        `</footer>`
-    `</body>`
-`</html>`
+'cd D:\Folder
+http-server'
+
+Or, like this:
+
+'http-server D:\Folder'
