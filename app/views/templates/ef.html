@@ -1,0 +1,74 @@
+<form role="form" class="form-horizontal">
+	<fieldset>
+		<!-- Form Name -->
+		<legend>Form Employee</legend>
+		<!-- Input FullName -->
+		<div class="form-group">
+			<label for="fullName" class="col-md-2 control-label">Name </label>
+			<div class="col-md-10">
+				<input type="text" id="fullName" name="fullName" placeholder="fullName" class="form-control input-md">
+			</div>
+		</div>
+		<!-- textarea Notes -->
+		<div class="form-group">
+			<label for="notes" class="col-md-2 control-label">Notes </label>
+			<div class="col-md-10">
+				<textarea name="notes" id="notes" rows="5" class="form-control input-md notes" placeholder="notes"></textarea>
+			</div>
+		</div>		
+		<!-- department -->
+		<div class="form-group">
+			<label for="department" class="col-md-2 control-label">
+				Department
+			</label>
+			<div class="col-md-10">
+				<select name="department" id="department" class="form-control input-md">
+					<option value="">administrator</option>
+					<option value="">user</option>
+					<option value="">mod</option>
+					<option value="">maketting</option>
+				</select>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Perks</legend>
+		<!-- perks -->
+		<div class="form-group">
+  			<div class="col-md-10 col-md-offset-2">
+    			<div class="checkbox">
+      				<label for="perkCard"><input type="checkbox" name="perks" id="perkCard"  value="perkCard" checked> perkCard</label>
+      			</div>
+	    		<div class="checkbox">
+      				<label for="perkStock"><input type="checkbox" name="perks" id="perkStock" value="perkStock"> perkStock</label>
+      			</div>
+	    		<div class="checkbox">
+      				<label for="perkSixWeek"><input type="checkbox" name="perks" id="perkSixWeek" value="perkSixWeek"> perkSixWeek</label>
+      			</div>
+  			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>PayrollType</legend>
+		<!-- payrollType -->
+		<div class="form-group">
+  			<div class="col-md-10 col-md-offset-2">
+    			<div class="radio">
+      				<label for="w-2"><input type="radio" name="types" id="w-2"  value="w-2"> w-2</label>
+      			</div>
+	    		<div class="radio">
+      				<label for="1009"><input type="radio" name="types" id="1009" value="1009"> 1009</label>
+      			</div>
+	    		<div class="radio">
+      				<label for="none"><input type="radio" name="types" id="none" value="none"> none</label>
+      			</div>
+  			</div>
+		</div>
+	</fieldset>
+	<!-- submit -->
+	<div class="form-group">
+		<div class="col-md-10 col-md-offset-2">
+			<button class="btn btn-primary" name="submit" type="button">Submit</button>
+		</div>
+	</div>
+</form>

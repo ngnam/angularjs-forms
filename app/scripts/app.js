@@ -8,4 +8,4 @@
  *
  * Main module of the application.
  */
-var app = angular.module('angularFormsApp', []);
+var app = angular.module('angularFormsApp', []); 
