@@ -23,5 +23,9 @@ app.config(['$routeProvider', function($routeProvider) {
 			templateUrl: 'app/views/templates/ef.html',
 			controller: 'efController'
 		})
+		.when('/datapickerdemo', {
+			templateUrl: 'app/views/datapickerdemo.html',
+			controller: 'DatepickerDemoCtrl'
+		})
 		.otherwise({ redirectTo: '/home' })
 }]);
