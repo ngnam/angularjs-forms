@@ -19,8 +19,8 @@
   =================================== -->
   <section class="container">
     <div class="row">        
-      <div class="col-md-10 col-md-offset-1" ng-controller="efController as efCtrl">
-        <employee-form />
+      <div class="col-md-10 col-md-offset-1">
+        <div ng-view></div>
       </div>
     </div>
   </section>
@@ -32,6 +32,7 @@
     <script src="bower/jquery/jquery.min.js"></script>
     <script src="bower/bootstrap/js/bootstrap.js"></script>
     <script src="bower/angular/angular.js"></script>
+    <script src="bower/angular-route/angular-route.js"></script>
         <!-- js app -->
         <script src="app/scripts/app.js"></script>
         <script src="app/scripts/directives/headerdirective.js"></script>
@@ -39,7 +40,9 @@
         <!-- js employeeForm -->
         <script src="app/scripts/controllers/efController.js"></script>
         <script src="app/scripts/directives/efDirective.js"></script>
-        <script src="app/scripts/services/efService.js"></script>
+        <script src="app/scripts/services/DataService.js"></script>
+        <!-- home -->
+        <script src="app/scripts/controllers/homeController.js"></script>
 
 </body>
 </html>

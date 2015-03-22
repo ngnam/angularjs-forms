@@ -16,6 +16,10 @@
 	padding-left: 35px;
 }
 
+button:focus {
+	outline: none;
+}
+
 /* --------------------------------------------------
 Main Style */
 
