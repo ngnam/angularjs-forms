@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-var app = angular.module('angularFormsApp', ['ngRoute']); 
+var app = angular.module('angularFormsApp', ['ngRoute','ui.bootstrap']); 
 app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
 		.when('/home', {

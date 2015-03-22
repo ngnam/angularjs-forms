@@ -20,6 +20,7 @@ button:focus {
 	outline: none;
 }
 
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 /* --------------------------------------------------
 Main Style */
 

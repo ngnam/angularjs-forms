@@ -2,6 +2,14 @@
 
 ==> [angularjs-forms](https://github.com/ngnam/angularjs-forms/archive/gh-pages.zip)
 
+## angular-ui-bootstrap
+
+'bower install bootstrap-ui --save'
+
+and
+
+'bower install angular-bootstrap --save' with templates if not load /template/modal/windown.html & /template/modal/backdrop.html
+
 ## http-server
 
 `npm install http-server -g`

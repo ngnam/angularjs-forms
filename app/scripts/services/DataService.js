@@ -2,21 +2,18 @@ app.factory('DataService', [function () {
 	//getEmployee
 	var getEmployee = function (id) {
 		if (id == 123) {
-			return {
-				employee: {
-					id: 123,
-					fullName: 'nguyen van nam',
-					notes: 'laptrinhvien',
-					department: 'ngnam',
-					perkCard: true,
-					perkStock: false,
-					perkSixWeek: true,
-					payrollType: "none"
-				}
+			return {				
+				id: 123,
+				fullName: 'nguyen van nam',
+				notes: 'laptrinhvien',
+				department: 'ngnam',
+				perkCard: true,
+				perkStock: false,
+				perkSixWeek: true,
+				payrollType: "none"				
 			};
-		}else {
-			return underfined;
 		}
+		return console.log('no data');
 	};
 	//insertEmployee
 	var insertEmployee = function (newEmployee) {

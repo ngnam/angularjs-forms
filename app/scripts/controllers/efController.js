@@ -1,11 +1,9 @@
-app.controller('efController', ['$scope', 'DataService', '$window', '$routeParams', function ($scope, DataService, $window, $routeParams) {
+app.controller('efController', ['$scope', 'DataService', '$window', '$routeParams', '$modalInstance', function ($scope, DataService, $window, $routeParams, $modalInstance) {
 
-	if ($routeParams.id) {
+	if ($routeParams.id) 
 		$scope.employee = DataService.getEmployee($routeParams.id);		
-	}
-	else {
-		$scope.employee = { id: 0 }
-	};
+	else 
+		$scope.employee = { id: 0 };
 
 	$scope.editableEmployee = angular.copy($scope.employee);
 
@@ -26,11 +24,12 @@ app.controller('efController', ['$scope', 'DataService', '$window', '$routeParam
 		}
 
 		$scope.employee = angular.copy($scope.editableEmployee);
-		$window.history.back();
+		// $window.history.back();
+		$modalInstance.close();
 	};
 
-	$scope.Cancel = function () {
-		$window.history.back();		
+	$scope.CancelForm = function () {
+		$modalInstance.dismiss();	
 	};
 
 
