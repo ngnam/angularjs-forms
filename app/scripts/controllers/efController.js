@@ -30,6 +30,21 @@ app.controller('efController', ['$scope', 'DataService', '$window', '$routeParam
 		"nodejs"
 	];
 
+	$scope.isReadonly = false;
+	$scope.max = 10;
+	$scope.hoveringOver = function(value) {
+		$scope.overStar = value;
+		$scope.percent = 100 * (value / $scope.max);
+	};
+	//ng-required
+	$scope.ShouldShowFullName = function () {
+		return true;
+	}
+	//ng-minlength
+	$scope.valueMinFullName = 5;
+	$scope.MinlengthFullName = function () {
+		return	$scope.valueMinFullName;
+	}
 	$scope.submitForm = function () {
 		if ($scope.editableEmployee.id == 0) {
 			//insert new employee
@@ -48,6 +63,5 @@ app.controller('efController', ['$scope', 'DataService', '$window', '$routeParam
 		// $modalInstance.dismiss();
 		$window.history.back();
 	};
-
 
 }]);

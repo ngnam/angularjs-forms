@@ -33,7 +33,9 @@ button:focus {
 @media (max-width: 768px) {
   .border_left { border-left: none;}
 }
-
+.rating-control {
+	margin-top: 3px;
+}
 /*top*/
 .scrollup {
     width: 50px;
@@ -51,6 +53,22 @@ button:focus {
     color: rgb(0, 71, 255);
 	font-weight: bold;
 }
+
+/*input[name="fullName"].ng-pristine {
+	background-color: green;
+}
+
+input[name="fullName"].ng-dirty {
+	background-color: red;
+}
+
+input[name="fullName"].ng-valid {
+	border: 3px solid blue;
+}
+
+input[name="fullName"].ng-invalid {
+	border: 3px solid black;
+}*/
 
 /* --------------------------------------------------
 Main Style */
