@@ -35,5 +35,9 @@ app.config(['$routeProvider', function($routeProvider) {
 			templateUrl: 'app/views/typeaheaddemo.html',
 			controller: 'TypeaheaddemoCtrl'
 		})
+		.when('/ratingdemo', {
+			templateUrl: 'app/views/ratingdemo.html',
+			controller: 'RatingDemoCtrl'
+		})
 		.otherwise({ redirectTo: '/home' })
 }]);

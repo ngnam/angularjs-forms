@@ -14,7 +14,7 @@ app.controller('efController', ['$scope', 'DataService', '$window', '$routeParam
 		"ngnam"
 	];
 
-	$scope.mytime = new Date();
+	// $scope.mytime = new Date();
 
 	$scope.ProgramerLanguage = [
 		"c",

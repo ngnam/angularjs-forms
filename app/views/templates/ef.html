@@ -39,8 +39,9 @@
 			</div>
 			<!-- timePicker -->
 			<div class="form-group">
-				<div class="con-md-10 col-md-offset-2">
-					<timepicker ng-model="edidableEmployee.mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+				<label for="mytime" class="col-md-2 control-label">My time </label>
+				<div class="col-md-10">
+					<timepicker ng-model="editsableEmployee.mytime"></timepicker>
 				</div>
 			</div>
 			<!-- topProgramerLanguage -->
@@ -49,7 +50,15 @@
 				<div class="col-md-10">
 					<span >Model {{editableEmployee.topProgramerLanguage | json}}</span>
 				
-					<input type="text" ng-model="editableEmployee.topProgramerLanguage" id="topProgramerLanguage" name="topProgramerLanguage" class="form-control input-md" typeahead="language for language in ProgramerLanguage | filter: $viewValue">
+					<input type="text" placeholder="select a language" ng-model="editableEmployee.topProgramerLanguage" id="topProgramerLanguage" name="topProgramerLanguage" class="form-control input-md" typeahead="language for language in ProgramerLanguage | filter: $viewValue">
+				</div>
+			</div>
+			<!-- rating -->
+			<div class="form-group">
+				<label for="rating" class="col-md-2 control-label">Rating </label>
+				<div class="col-md-10">
+					<rating style="outline: none;" ng-model="editableEmployee.rate" max="10" state-on="'glyphicon-heart'" ></rating>
+
 				</div>
 			</div>
 		</fieldset>

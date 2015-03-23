@@ -8,6 +8,8 @@ app.factory('DataService', [function () {
 				notes: 'laptrinhvien',
 				department: 'ngnam',
 				dateHired: '2/3/2015',
+				mytime: '2/3/2015 9:45 PM',
+				rate: '5',
 				perkCard: true,
 				perkStock: false,
 				perkSixWeek: true,
