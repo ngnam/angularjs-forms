@@ -45,7 +45,10 @@ app.controller('efController', ['$scope', 'DataService', '$window', '$routeParam
 	$scope.MinlengthFullName = function () {
 		return	$scope.valueMinFullName;
 	}
-	$scope.submitForm = function () {
+	$scope.submitForm = function (employeeForm) {
+		if (employeeForm.$valid) {
+
+
 		if ($scope.editableEmployee.id == 0) {
 			//insert new employee
 			DataService.insertEmployee($scope.editableEmployee);
@@ -57,6 +60,7 @@ app.controller('efController', ['$scope', 'DataService', '$window', '$routeParam
 		$scope.employee = angular.copy($scope.editableEmployee);
 		$window.history.back();
 		// $modalInstance.close();
+	}
 	};
 
 	$scope.CancelForm = function () {

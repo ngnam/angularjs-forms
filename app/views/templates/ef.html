@@ -128,7 +128,7 @@
 	<!-- submit -->
 	<div class="form-group">
 		<div class="col-md-10 col-md-offset-2">
-			<button class="btn btn-primary" name="submit" type="button" ng-click="submitForm()">Submit</button>
+			<button class="btn btn-primary" name="submit" type="button" ng-disabled="!employeeForm.$valid" ng-click="submitForm(employeeForm)">Submit</button>
 			<button class="btn btn-danger" name="submit" type="button" ng-click="CancelForm()">Cancel</button>
 			<a href="#/home" class="btn btn-info">back home</a>			
 		</div>
