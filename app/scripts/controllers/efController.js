@@ -1,4 +1,4 @@
-app.controller('efController', ['$scope', 'DataService', '$window', '$routeParams', '$modalInstance', function ($scope, DataService, $window, $routeParams, $modalInstance) {
+app.controller('efController', ['$scope', 'DataService', '$window', '$routeParams', function ($scope, DataService, $window, $routeParams) {
 
 	if ($routeParams.id) 
 		$scope.employee = DataService.getEmployee($routeParams.id);		
@@ -14,6 +14,22 @@ app.controller('efController', ['$scope', 'DataService', '$window', '$routeParam
 		"ngnam"
 	];
 
+	$scope.mytime = new Date();
+
+	$scope.ProgramerLanguage = [
+		"c",
+		"c++",
+		"c#",
+		"html",
+		"javascript",
+		"java",
+		"css",
+		"angular",
+		"asp.net",
+		"ruby",
+		"nodejs"
+	];
+
 	$scope.submitForm = function () {
 		if ($scope.editableEmployee.id == 0) {
 			//insert new employee
@@ -24,12 +40,13 @@ app.controller('efController', ['$scope', 'DataService', '$window', '$routeParam
 		}
 
 		$scope.employee = angular.copy($scope.editableEmployee);
-		// $window.history.back();
-		$modalInstance.close();
+		$window.history.back();
+		// $modalInstance.close();
 	};
 
 	$scope.CancelForm = function () {
-		$modalInstance.dismiss();	
+		// $modalInstance.dismiss();
+		$window.history.back();
 	};
 
 

@@ -27,5 +27,13 @@ app.config(['$routeProvider', function($routeProvider) {
 			templateUrl: 'app/views/datapickerdemo.html',
 			controller: 'DatepickerDemoCtrl'
 		})
+		.when('/timepickerdemo', {
+			templateUrl: 'app/views/timepickerdemo.html',
+			controller: 'TimepickerDemoCtrl'
+		})
+		.when('/typeaheaddemo', {
+			templateUrl: 'app/views/typeaheaddemo.html',
+			controller: 'TypeaheaddemoCtrl'
+		})
 		.otherwise({ redirectTo: '/home' })
 }]);

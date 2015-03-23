@@ -7,6 +7,7 @@ app.factory('DataService', [function () {
 				fullName: 'nguyen van nam',
 				notes: 'laptrinhvien',
 				department: 'ngnam',
+				dateHired: '2/3/2015',
 				perkCard: true,
 				perkStock: false,
 				perkSixWeek: true,
