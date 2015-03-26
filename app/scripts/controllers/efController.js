@@ -40,32 +40,40 @@ app.controller('efController', ['$scope', 'DataService', '$window', '$routeParam
 	$scope.ShouldShowFullName = function () {
 		return true;
 	}
+	
 	//ng-minlength
 	$scope.valueMinFullName = 5;
 	$scope.MinlengthFullName = function () {
 		return	$scope.valueMinFullName;
 	}
+
 	$scope.submitForm = function (employeeForm) {
-		if (employeeForm.$valid) {
+		//when $invalid after submit
+		$scope.$broadcast('show-errors-event');
+		if ($scope.employeeForm.$invalid)
+			return;
+		if ($scope.employeeForm.$valid) {
+			if ($scope.editableEmployee.id == 0) {
+				//insert new employee
+				DataService.insertEmployee($scope.editableEmployee);
+			}else {
+				//UPDATE employee
+				DataService.updateEmployee($scope.editableEmployee);
+			}
 
-
-		if ($scope.editableEmployee.id == 0) {
-			//insert new employee
-			DataService.insertEmployee($scope.editableEmployee);
-		}else {
-			//UPDATE employee
-			DataService.updateEmployee($scope.editableEmployee);
-		}
-
-		$scope.employee = angular.copy($scope.editableEmployee);
-		$window.history.back();
-		// $modalInstance.close();
-	}
+			$scope.employee = angular.copy($scope.editableEmployee);
+			$window.history.back();
+			// $modalInstance.close();	
+		};
 	};
 
 	$scope.CancelForm = function () {
 		// $modalInstance.dismiss();
 		$window.history.back();
 	};
+
+	$scope.resetForm = function () {
+		$scope.$broadcast('hide-errors-event');
+	}
 
 }]);

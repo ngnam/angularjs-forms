@@ -3,16 +3,25 @@
 </div>  -->
 <!-- <div class="modal-body"> -->
 	<form role="form" name="employeeForm" novalidate class="form-horizontal"> <!-- ng-submit="submitForm()" -->
-		<fieldset>
+		<fieldset id="form-group">
 			<!-- Form Name -->
 			<legend>Form Employee</legend>
 			<!-- Input FullName -->
-			<div class="form-group" ng-class="{'has-error' : employeeForm.fullName.$invalid &&employeeForm.fullName.$dirty}">
+			<div class="form-group"  show-errors>
 				<label for="fullName" class="col-md-2 control-label">Name </label>
 				<div class="col-md-10">
-					<input type="text" id="fullName" name="fullName" placeholder="fullName" class="form-control input-md" ng-model="editableEmployee.fullName" ng-required="ShouldShowFullName()" ng-minlength="MinlengthFullName()">
-					<span class="help-block" ng-show="employeeForm.fullName.$error.required && employeeForm.fullName.$dirty">Full Name is Requied!</span>
-					<span class="help-block" ng-show="employeeForm.fullName.$error.minlength && employeeForm.fullName.$dirty">FullName is minlength {{valueMinFullName}} charater.</span>
+					<input type="text" id="fullName" name="fullName" placeholder="fullName" class="form-control input-md" ng-model="editableEmployee.fullName" ng-required="ShouldShowFullName()" ng-minlength="MinlengthFullName()" ng-pattern="/^A/">
+					<span class="help-block" ng-if="employeeForm.fullName.$error.required">Full Name is Requied!</span>
+					<span class="help-block" ng-if="employeeForm.fullName.$error.minlength">FullName is minlength {{valueMinFullName}} charater.</span>
+					<span class="help-block" ng-if="employeeForm.fullName.$error.pattern">FullName must start A.</span>
+				</div>
+			</div>
+			<!-- input email -->
+			<div class="form-group" show-errors>
+				<label for="email" class="col-md-2 control-label">Email</label>
+				<div class="col-md-10">
+					<input type="email" name="email" id="email" class="form-control input-md" placeholder="email@gmail.com" ng-model="editableEmployee.email" ng-required="true">
+					<span class="help-block" ng-if="employeeForm.email.$error">A valid Email is Required.</span>
 				</div>
 			</div>
 			<!-- textarea Notes -->
@@ -122,15 +131,17 @@
 	  			</div>
 			</div>
 		</fieldset>		
+
+		<!-- submit -->
+		<div class="form-group">
+			<div class="col-md-10 col-md-offset-2">
+				<button class="btn btn-primary" name="submit" type="button" ng-click="submitForm()">Submit</button>
+				<button class="btn btn-danger" name="cancel" type="button" ng-click="CancelForm()">Cancel</button>
+				<input type="reset" value="Reset" ng-click="resetForm()" class="btn btn-warning">
+			</div>
+		</div>
 	</form>
 <!-- </div> -->
 <!-- <div class="modal-footer"> -->
-	<!-- submit -->
-	<div class="form-group">
-		<div class="col-md-10 col-md-offset-2">
-			<button class="btn btn-primary" name="submit" type="button" ng-disabled="!employeeForm.$valid" ng-click="submitForm(employeeForm)">Submit</button>
-			<button class="btn btn-danger" name="submit" type="button" ng-click="CancelForm()">Cancel</button>
-			<a href="#/home" class="btn btn-info">back home</a>			
-		</div>
-	</div>
+	
 <!-- </div>
